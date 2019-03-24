@@ -29,7 +29,8 @@ namespace DuckScoller.Controllers
             "They",
             "It",
             "She",
-            "That"
+            "That",
+            "Wisdom"
         };
 
         private List<string> Verb = new List<string>
@@ -52,7 +53,8 @@ namespace DuckScoller.Controllers
             "love",
             "care",
             "entertainment",
-            "judgement"
+            "judgement",
+            "jurisdiction"
         };
 
         private string DispenseWisdom()
