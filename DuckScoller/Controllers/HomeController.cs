@@ -12,7 +12,54 @@ namespace DuckScoller.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["wisdom"] = DispenseWisdom();
             return View();
+        }
+
+        public IActionResult darkduckduck()
+        {
+            ViewData["wisdom"] = DispenseWisdom();
+            return View();
+        }
+
+        private List<string> Subject = new List<string>
+        {
+            "Duck",
+            "He",
+            "They",
+            "It",
+            "She",
+            "That"
+        };
+
+        private List<string> Verb = new List<string>
+        {
+            "perceives",
+            "understands",
+            "values",
+            "exemplifies",
+            "is",
+            "has",
+            "delivers",
+            "provides"
+        };
+
+        private List<string> Noun = new List<string>
+        {
+            "friendship",
+            "kindness",
+            "compassion",
+            "love",
+            "care",
+            "entertainment",
+            "judgement"
+        };
+
+        private string DispenseWisdom()
+        {
+            Random rnd = new Random();
+
+            return $"{Subject[rnd.Next(0, Subject.Count)]} {Verb[rnd.Next(0, Verb.Count)]} {Noun[rnd.Next(0, Noun.Count)]}";
         }
 
         public IActionResult Privacy()
