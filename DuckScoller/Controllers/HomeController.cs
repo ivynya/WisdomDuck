@@ -16,7 +16,7 @@ namespace DuckScoller.Controllers
             return View();
         }
 
-        public IActionResult darkduckduck()
+        public IActionResult Wisdom()
         {
             ViewData["wisdom"] = DispenseWisdom();
             return View();

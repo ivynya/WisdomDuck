@@ -61,7 +61,7 @@ namespace DuckScoller
                 routes.MapRoute(
                     "wisdom",
                     "wisdom",
-                    new { controller = "Home", action = "darkduckduck", id = "" });
+                    new { controller = "Home", action = "Wisdom", id = "" });
             });
         }
     }
