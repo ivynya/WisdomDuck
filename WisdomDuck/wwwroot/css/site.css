@@ -1,7 +1,11 @@
-﻿.brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿a {
+    color: #777;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+a:hover {
+    color: #000;
 }
 
 .center {
@@ -13,6 +17,22 @@ img {
     width: 600px;
     height: 600px;
     margin: auto;
+    animation: 0.5s size-bounce cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes size-bounce {
+    0% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(0.95);
+    }
+    65% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .border-top {
