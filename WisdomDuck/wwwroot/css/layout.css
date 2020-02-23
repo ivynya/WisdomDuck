@@ -9,16 +9,22 @@ body {
     margin: 0;
 }
 
-nav {
+nav .container {
     line-height: 60px;
     height: 60px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link {
+    margin-left: 20px;
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: 300px;
+    padding: 0 10px;
     margin-right: auto;
     margin-left: auto;
 }
