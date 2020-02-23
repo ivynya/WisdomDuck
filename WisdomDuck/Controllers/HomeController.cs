@@ -16,6 +16,7 @@ namespace DuckScoller.Controllers
             return View();
         }
 
+        [Route("/wisdom")]
         public IActionResult Wisdom()
         {
             ViewData["wisdom"] = DispenseWisdom();
