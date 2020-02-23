@@ -24,10 +24,7 @@ img {
     0% {
         transform: scale(1);
     }
-    35% {
-        transform: scale(0.95);
-    }
-    65% {
+    50% {
         transform: scale(1.05);
     }
     100% {
