@@ -22,7 +22,7 @@ namespace DuckScoller.Controllers
             return View();
         }
 
-        private List<string> Subject = new List<string>
+        private readonly List<string> Subject = new List<string>
         {
             "Duck",
             "He",
@@ -34,7 +34,7 @@ namespace DuckScoller.Controllers
             "You"
         };
 
-        private List<string> Verb = new List<string>
+        private readonly List<string> Verb = new List<string>
         {
             "perceives",
             "understands",
@@ -51,7 +51,7 @@ namespace DuckScoller.Controllers
             "acts with"
         };
 
-        private List<string> Noun = new List<string>
+        private readonly List<string> Noun = new List<string>
         {
             "friendship",
             "kindness",

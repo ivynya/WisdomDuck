@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WisdomDuck", "DuckScoller\WisdomDuck.csproj", "{01FD1739-4AC5-4FA9-88F9-FC0259371EAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WisdomDuck", "WisdomDuck\WisdomDuck.csproj", "{1ACEE1DB-CBC3-44D6-B16F-5B0AE201D252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{01FD1739-4AC5-4FA9-88F9-FC0259371EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01FD1739-4AC5-4FA9-88F9-FC0259371EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01FD1739-4AC5-4FA9-88F9-FC0259371EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01FD1739-4AC5-4FA9-88F9-FC0259371EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACEE1DB-CBC3-44D6-B16F-5B0AE201D252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACEE1DB-CBC3-44D6-B16F-5B0AE201D252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACEE1DB-CBC3-44D6-B16F-5B0AE201D252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACEE1DB-CBC3-44D6-B16F-5B0AE201D252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
