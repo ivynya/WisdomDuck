@@ -4,27 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wisdomduck</title>
+    <meta name="description" content="A duck that dispenses wisdom. What more can you ask for?" />
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
-    </environment>
+    <link rel="stylesheet" href="~/css/layout.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div class="container">
-        <br />
-        <h1 class="text-center">wisdom duck</h1>
-        <main role="main" class="pb-3">
+    <header>
+        <nav>
+            <div class="container">
+                <a class="brand" href="/">wisdomduck</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
             @RenderBody()
-        </main>
-    </div>
+        </div>
+    </main>
 
     <footer class="border-top footer text-muted text-center">
         <div class="container">

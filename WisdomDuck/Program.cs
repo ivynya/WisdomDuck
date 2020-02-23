@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace DuckScoller
+namespace WisdomDuck
 {
     public class Program
     {

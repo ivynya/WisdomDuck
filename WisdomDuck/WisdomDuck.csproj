@@ -6,12 +6,7 @@
     <UserSecretsId>d370b289-c1c6-4a1c-8e81-d964cfb6e4a0</UserSecretsId>
   </PropertyGroup>
 
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-
-
+  
   <ItemGroup>
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>

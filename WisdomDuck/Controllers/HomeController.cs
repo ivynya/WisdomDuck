@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DuckScoller.Models;
+using WisdomDuck.Models;
 
-namespace DuckScoller.Controllers
+namespace WisdomDuck.Controllers
 {
     public class HomeController : Controller
     {

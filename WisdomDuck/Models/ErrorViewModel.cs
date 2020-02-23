@@ -1,6 +1,6 @@
 using System;
 
-namespace DuckScoller.Models
+namespace WisdomDuck.Models
 {
     public class ErrorViewModel
     {
