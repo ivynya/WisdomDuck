@@ -23,10 +23,14 @@ nav .container {
 }
 
 .container {
-    max-width: 300px;
-    padding: 0 10px;
+    max-width: 280px;
+    padding: 0 20px;
     margin-right: auto;
     margin-left: auto;
+}
+
+main {
+    margin-bottom: 60px;
 }
 
 footer {
@@ -38,6 +42,7 @@ footer {
     white-space: nowrap;
     height: 60px;
     line-height: 60px;
+    text-align: center;
 }
 
 @media (min-width: 576px) {
