@@ -9,19 +9,6 @@ body {
     margin: 0;
 }
 
-nav .container {
-    line-height: 60px;
-    height: 60px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.link {
-    margin-left: 20px;
-}
-
 .container {
     max-width: 280px;
     padding: 0 20px;
