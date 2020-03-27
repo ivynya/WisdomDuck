@@ -38,3 +38,9 @@ img {
         height: 600px;
     }
 }
+
+@media screen and (max-height: 1000px) {
+    br {
+        display: none;
+    }
+}
