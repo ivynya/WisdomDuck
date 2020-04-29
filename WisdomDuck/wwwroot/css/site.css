@@ -17,18 +17,43 @@ img {
     width: 250px;
     height: 250px;
     margin: auto;
-    animation: 0.5s size-bounce cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.animated {
+    animation: 0.2s size-bounce cubic-bezier(0.39, 0.575, 0.565, 1) alternate;
+    animation-iteration-count: 2;
+}
+
+.flip-animated {
+    animation: 0.2s flip-size-bounce cubic-bezier(0.39, 0.575, 0.565, 1) alternate;
+    animation-iteration-count: 2;
+}
+
+#wisdom {
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
+.visible {
+    opacity: 1 !important;
 }
 
 @keyframes size-bounce {
     0% {
         transform: scale(1);
     }
-    50% {
+    100% {
         transform: scale(1.05);
     }
+}
+
+@keyframes flip-size-bounce {
+    0% {
+        transform: scaleX(-1) scale(1);
+    }
+
     100% {
-        transform: scale(1);
+        transform: scaleX(-1) scale(1.05);
     }
 }
 

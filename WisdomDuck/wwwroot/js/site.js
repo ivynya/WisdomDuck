@@ -1,4 +1,24 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var duck, wisdom, state = 1;
 
-// Write your JavaScript code.
+document.addEventListener("DOMContentLoaded", () => {
+    duck = document.getElementById("duck");
+    wisdom = document.getElementById("wisdom"); });
+
+// Mirror and animate duck, also dispense wisdom
+function dispense(e) {
+    // If client has JS disabled, this falls back to an href
+    e.preventDefault();
+    // Mirror and animate duck
+    duck.style.transform = `scaleX(${-state})`;
+    duck.classList.toggle("animated");
+    duck.classList.toggle("flip-animated");
+    // Fetch dispensed wisdom from API
+    // On slow connections, animate
+    wisdom.classList.toggle("visible");
+    fetch("/api/wisdom/dispense")
+        .then(r => r.text())
+        .then(w => wisdom.innerText = `"${w}"`)
+        .then(() => wisdom.classList.toggle("visible"));
+    // Update state
+    state = -state;
+}

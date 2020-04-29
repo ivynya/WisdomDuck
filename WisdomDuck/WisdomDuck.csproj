@@ -6,9 +6,11 @@
     <UserSecretsId>d370b289-c1c6-4a1c-8e81-d964cfb6e4a0</UserSecretsId>
   </PropertyGroup>
 
-  
   <ItemGroup>
-    <Folder Include="wwwroot\lib\" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="wwwroot\lib\**" />
   </ItemGroup>
 
   

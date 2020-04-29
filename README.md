@@ -1,6 +1,12 @@
-# WisdomDuck
-The duck dispenses wisdom.
+# wisdom duck
+## https://wisdomduck.azurewebsites.net
 
-Click to dispense more wisdom.
+1) wisdom duck dispenses wisdom
+2) click to dispense more wisdom
 
-View the wisdom dispensing at: https://wisdomduck.azurewebsites.net
+## features
+- [the twemoji duck](https://twemoji.twitter.com)
+- dynamic mega-wisdom generation
+- works on all devices ever through space and time big real guarantee.
+- super duper turbo high performance wisdom dispensation and noscript fallback.
+- [hyper epic api for devs.](https://wisdomduck.azurewebsites.net/api/wisdom/dispense)
