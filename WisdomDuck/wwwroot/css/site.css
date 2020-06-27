@@ -1,11 +1,11 @@
 ﻿a {
-    color: #555;
+    color: #55f;
     text-decoration: none;
     transition-duration: 0.2s;
 }
 
 a:hover {
-    color: #000;
+    color: #0af;
 }
 
 .center {

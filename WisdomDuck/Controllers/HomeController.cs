@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WisdomDuck.Data;
@@ -32,6 +31,12 @@ namespace WisdomDuck.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [HttpGet("/moving")]
+        public IActionResult Moving()
         {
             return View();
         }
