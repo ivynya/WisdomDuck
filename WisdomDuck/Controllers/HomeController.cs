@@ -9,8 +9,17 @@ namespace WisdomDuck.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Persistence _persistence;
+
+        public HomeController(Persistence persistence)
+        {
+            _persistence = persistence;
+        }
+
         public IActionResult Index()
         {
+            _persistence.Visitors += 1;
+
             ViewData["wisdom"] = DispenseWisdom();
             return View();
         }
@@ -24,6 +33,7 @@ namespace WisdomDuck.Controllers
 
         private string DispenseWisdom()
         {
+            _persistence.LegacyDispensations += 1;
             Random rnd = new Random();
 
             return $"{Words.Subject[rnd.Next(0, Words.Subject.Count)]} " +

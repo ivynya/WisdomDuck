@@ -29,6 +29,8 @@ namespace WisdomDuck
             services.AddResponseCompression();
 
             services.AddMvc();
+
+            services.AddSingleton<Persistence>();
         }
 
         // This method configures the HTTP request pipeline.
