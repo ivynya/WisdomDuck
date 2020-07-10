@@ -10,24 +10,13 @@ namespace WisdomDuck.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["wisdom"] = DispenseWisdom();
             return View();
         }
 
         [Route("/wisdom")]
         public IActionResult Wisdom()
         {
-            ViewData["wisdom"] = DispenseWisdom();
-            return View();
-        }
-
-        private string DispenseWisdom()
-        {
-            Random rnd = new Random();
-
-            return $"{Words.Subject[rnd.Next(0, Words.Subject.Count)]} " +
-                   $"{Words.Verb[rnd.Next(0, Words.Verb.Count)]} " +
-                   $"{Words.Noun[rnd.Next(0, Words.Noun.Count)]}";
+            return Redirect("/");
         }
 
         public IActionResult Privacy()
