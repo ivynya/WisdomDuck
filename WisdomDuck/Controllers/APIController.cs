@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using WisdomDuck.Data;
 
 namespace WisdomDuck.Controllers
@@ -9,10 +10,12 @@ namespace WisdomDuck.Controllers
     public class APIController : ControllerBase
     {
         private readonly Persistence _persistence;
+        private readonly IConfiguration _config;
 
-        public APIController(Persistence persistence)
+        public APIController(Persistence persistence, IConfiguration configuration)
         {
             _persistence = persistence;
+            _config = configuration;
         }
 
         [HttpGet("wisdom/dispense")]
@@ -32,6 +35,19 @@ namespace WisdomDuck.Controllers
             return $"{_persistence.Visitors} Visitors, " +
                    $"{_persistence.APIDispensations} API Dispensations, " +
                    $"{_persistence.LegacyDispensations} Legacy Dispensations";
+        }
+
+        [HttpPatch("wisdom/stats")]
+        public IActionResult SetStats(int v, int a, int l, string p)
+        {
+            if (p == _config["password"])
+            {
+                _persistence.Visitors += v;
+                _persistence.APIDispensations += a;
+                _persistence.LegacyDispensations += l;
+                return StatusCode(204);
+            }
+            else return StatusCode(403);
         }
     }
 }
