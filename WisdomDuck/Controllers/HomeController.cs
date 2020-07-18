@@ -10,24 +10,24 @@ namespace WisdomDuck.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectPermanent("https://wisdomduck.sdbagel.com/");
         }
 
         [Route("/wisdom")]
         public IActionResult Wisdom()
         {
-            return Redirect("/");
+            return RedirectPermanent("https://wisdomduck.sdbagel.com/Wisdom");
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return RedirectPermanent("https://wisdomduck.sdbagel.com/Home/Privacy");
         }
 
         [HttpGet("/moving")]
         public IActionResult Moving()
         {
-            return View();
+            return RedirectPermanent("https://wisdomduck.sdbagel.com/");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

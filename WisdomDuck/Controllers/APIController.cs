@@ -9,9 +9,9 @@ namespace WisdomDuck.Controllers
     public class APIController : ControllerBase
     {
         [HttpGet("wisdom/dispense")]
-        public string GetWisdom()
+        public IActionResult GetWisdom()
         {
-            return "📦 Duck is moving. This API is deprecated - use the new one at https://wisdomduck.sdbagel.com/api/wisdom/dispense.";
+            return RedirectPermanent("https://wisdomduck.sdbagel.com/api/wisdom/dispense");
         }
     }
 }

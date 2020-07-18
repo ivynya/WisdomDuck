@@ -262,3 +262,4 @@ __pycache__/
 DuckScoller/Properties/PublishProfiles/wisdomduck - Web Deploy.pubxml
 DuckScoller/Properties/PublishProfiles/wisdomduck - Web Deploy.pubxml
 *.pubxml
+WisdomDuck/appsettings.Production.json
