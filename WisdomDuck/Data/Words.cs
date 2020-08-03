@@ -13,7 +13,13 @@ namespace WisdomDuck.Data
             "She",
             "That",
             "Wisdom",
-            "You"
+            "You",
+            "Knowledge",
+            "Excellence",
+            "One",
+            "Friend",
+            "Guardian",
+            "Teacher"
         };
 
         public static readonly List<string> Verb = new List<string>
@@ -30,7 +36,22 @@ namespace WisdomDuck.Data
             "abolishes",
             "accelerates",
             "achieves",
-            "acts with"
+            "acts with",
+            "pictures",
+            "confronts",
+            "locates",
+            "teaches",
+            "serves",
+            "accesses",
+            "incurs",
+            "steals",
+            "introduces",
+            "shows",
+            "extracts",
+            "forgives",
+            "develops",
+            "deconstructs",
+            "theorizes"
         };
 
         public static readonly List<string> Noun = new List<string>
@@ -41,7 +62,7 @@ namespace WisdomDuck.Data
             "love",
             "care",
             "entertainment",
-            "judgement",
+            "judgment",
             "jurisdiction",
             "beauty",
             "play",
@@ -51,7 +72,19 @@ namespace WisdomDuck.Data
             "theory",
             "power",
             "development",
-            "strategy"
+            "strategy",
+            "professionalism",
+            "speed",
+            "tribulations",
+            "potato",
+            "communication",
+            "warning",
+            "income",
+            "attention",
+            "assistance",
+            "perception",
+            "imagination",
+            "wrath"
         };
     }
 }
