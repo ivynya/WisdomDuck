@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WisdomDuck.Data;
 using WisdomDuck.Models;
@@ -16,11 +17,27 @@ namespace WisdomDuck.Controllers
             _persistence = persistence;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string re = null)
         {
+            ViewData["wisdom"] = DispenseWisdom();
             _persistence.Visitors += 1;
 
-            ViewData["wisdom"] = DispenseWisdom();
+            if (re != null)
+            {
+                var referral = _persistence.Referrals.FirstOrDefault(r => r.From == re);
+                if (referral == null)
+                {
+                    referral = new Persistence.Referral
+                    {
+                        From = re,
+                        Visitors = 1,
+                        APIDispensations = 0
+                    };
+                    _persistence.Referrals.Add(referral);
+                }
+                else referral.Visitors += 1;
+            }
+
             return View();
         }
 

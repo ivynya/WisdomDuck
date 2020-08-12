@@ -15,7 +15,7 @@ function dispense(e) {
     // Fetch dispensed wisdom from API
     // On slow connections, animate
     wisdom.classList.toggle("visible");
-    fetch("/api/wisdom/dispense")
+    fetch("/api/wisdom/dispense" + window.location.search ?? "")
         .then(r => r.text())
         .then(w => wisdom.innerText = `"${w}"`)
         .then(() => wisdom.classList.toggle("visible"));

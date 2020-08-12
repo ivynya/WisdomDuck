@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using WisdomDuck.Data;
 
 namespace WisdomDuck.Controllers
@@ -19,9 +21,25 @@ namespace WisdomDuck.Controllers
         }
 
         [HttpGet("wisdom/dispense")]
-        public string GetWisdom()
+        public string GetWisdom(string re = null)
         {
             _persistence.APIDispensations += 1;
+
+            if (re != null)
+            {
+                var referral = _persistence.Referrals.FirstOrDefault(r => r.From == re);
+                if (referral == null)
+                {
+                    referral = new Persistence.Referral
+                    {
+                        From = re,
+                        Visitors = 0,
+                        APIDispensations = 1
+                    };
+                    _persistence.Referrals.Add(referral);
+                }
+                else referral.APIDispensations += 1;
+            }
 
             Random rnd = new Random();
             return $"{Words.Subject[rnd.Next(0, Words.Subject.Count)]} " +
@@ -32,9 +50,7 @@ namespace WisdomDuck.Controllers
         [HttpGet("wisdom/stats")]
         public string GetStats()
         {
-            return $"{_persistence.Visitors} Visitors, " +
-                   $"{_persistence.APIDispensations} API Dispensations, " +
-                   $"{_persistence.LegacyDispensations} Legacy Dispensations";
+            return JsonConvert.SerializeObject(_persistence, Formatting.Indented);
         }
 
         [HttpPatch("wisdom/stats")]
