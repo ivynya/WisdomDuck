@@ -2,15 +2,14 @@
     ViewData["Title"] = "Wisdom";
 }
 
-<div class="center">
-    <br /><br />
+<div class="center flex flex-column align-center justify-center">
     <h1>wisdom duck</h1>
-    <p>welcome to the duck's new home.</p>
+    <p>click or tap the duck to dispense wisdom</p>
     <br />
     <br />
     <a onclick="dispense(event)" href="~/">
         <img id="duck" class="animated" src="~/img/Wisdom.png" alt="Click to generate more wisdom." />
     </a>
 
-    <h1 id="wisdom" class="visible">"@ViewData["wisdom"]"</h1>
+    <p id="wisdom" class="visible">"@ViewData["wisdom"]"</p>
 </div>

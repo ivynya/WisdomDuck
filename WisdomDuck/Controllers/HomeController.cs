@@ -48,6 +48,12 @@ namespace WisdomDuck.Controllers
             return View();
         }
 
+        [Route("/stats")]
+        public IActionResult Stats()
+        {
+            return View(_persistence);
+        }
+
         private string DispenseWisdom()
         {
             _persistence.LegacyDispensations += 1;

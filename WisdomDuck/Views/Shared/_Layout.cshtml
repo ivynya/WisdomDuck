@@ -12,19 +12,17 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="~/css/layout.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/flexcore.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 </head>
-<body>
-    <main>
-        <div class="container">
-            @RenderBody()
-        </div>
+<body class="container flex-column">
+    <main class="flex flex-column">
+        @RenderBody()
     </main>
 
     <footer>
-        <div class="container">
-            &copy; 2020 wisdomduck - <a class="link" href="/home/privacy">Privacy</a>
-        </div>
+        <span>&copy; 2020 wisdomduck - </span>
+        <a class="link" href="/home/privacy">Privacy</a>
     </footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>

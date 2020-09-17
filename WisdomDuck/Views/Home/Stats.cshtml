@@ -1,0 +1,36 @@
+﻿@model Persistence
+
+<style>
+    .stats-card h4 {
+        margin-bottom: 2px;
+    }
+    .stats-card p {
+        margin: 0;
+        margin-top: 3px;
+    }
+</style>
+
+<div class="flex flex-column align-center justify-center">
+    <h1>wisdom duck stats</h1>
+    <p><a href="/api/wisdom/stats" class="btn-outline">View raw JSON</a></p>
+    <br /><br />
+    <h3>Global Statistics</h3>
+    <ul>
+        <li><p>Total Visitors: @Model.Visitors</p></li>
+        <li><p>Legacy Dispensations: @Model.LegacyDispensations</p></li>
+        <li><p>API Dispensations: @Model.APIDispensations</p></li>
+    </ul>
+    <br />
+    <div class="flex-column">
+        <h3>Referral Stats</h3>
+        @for (int i = 0; i < Model.Referrals.Count; i++)
+        {
+            <div class="stats-card">
+                <h4>@Model.Referrals[i].From</h4>
+                <p>Visitors: @Model.Referrals[i].Visitors</p>
+                <p>API Dispensations: @Model.Referrals[i].APIDispensations</p>
+            </div>
+        }
+    </div>
+    <br /><br />
+</div>

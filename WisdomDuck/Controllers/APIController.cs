@@ -54,13 +54,15 @@ namespace WisdomDuck.Controllers
         }
 
         [HttpPatch("wisdom/stats")]
-        public IActionResult SetStats(int v, int a, int l, string p)
+        public IActionResult SetStats(string statsJSON, string p)
         {
+            Persistence newPersist = JsonConvert.DeserializeObject<Persistence>(statsJSON);
             if (p == _config["password"])
             {
-                _persistence.Visitors += v;
-                _persistence.APIDispensations += a;
-                _persistence.LegacyDispensations += l;
+                _persistence.Visitors = newPersist.Visitors;
+                _persistence.APIDispensations = newPersist.APIDispensations;
+                _persistence.LegacyDispensations = newPersist.LegacyDispensations;
+                _persistence.Referrals = newPersist.Referrals;
                 return StatusCode(204);
             }
             else return StatusCode(403);
