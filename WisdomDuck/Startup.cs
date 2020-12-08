@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -28,6 +29,15 @@ namespace WisdomDuck
 
             services.AddResponseCompression();
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("*");
+                    });
+            });
+
             services.AddMvc();
 
             services.AddSingleton<Persistence>();
@@ -50,6 +60,8 @@ namespace WisdomDuck
             app.UseResponseCompression();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseCors();
 
             app.UseRouting();
 
