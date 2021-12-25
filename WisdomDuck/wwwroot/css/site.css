@@ -38,6 +38,7 @@ img {
 }
 
 #wisdom {
+    margin: 0;
     font-size: 2rem;
     font-weight: bold;
     opacity: 0;
@@ -71,5 +72,6 @@ img {
     img {
         width: 600px;
         height: 600px;
+        max-height: 60vh;
     }
 }
