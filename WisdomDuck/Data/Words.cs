@@ -19,7 +19,9 @@ namespace WisdomDuck.Data
             "One",
             "Friend",
             "Guardian",
-            "Teacher"
+            "Teacher",
+            "Aidan", // Sponsored by AidanJSmith
+            "Goose" // Sponsored by AidanJSmith
         };
 
         public static readonly List<string> Verb = new List<string>
@@ -84,7 +86,8 @@ namespace WisdomDuck.Data
             "assistance",
             "perception",
             "imagination",
-            "wrath"
+            "wrath",
+            "catboy" // Sponsored by AidanJSmith
         };
     }
 }
