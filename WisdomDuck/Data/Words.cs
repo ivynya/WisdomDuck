@@ -20,6 +20,7 @@ namespace WisdomDuck.Data
             "Friend",
             "Guardian",
             "Teacher",
+            "Ivy",
             "Aidan", // Sponsored by AidanJSmith
             "Goose" // Sponsored by AidanJSmith
         };
@@ -87,6 +88,8 @@ namespace WisdomDuck.Data
             "perception",
             "imagination",
             "wrath",
+            "cats",
+            "catgirl",
             "catboy" // Sponsored by AidanJSmith
         };
     }
