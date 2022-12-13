@@ -1,8 +1,7 @@
-# wisdom duck
-## https://wisdomduck.sdbagel.com
+# wisdom duck @ https://wisdomduck.sdbagel.com
 
 1) wisdom duck dispenses wisdom
-2) click to dispense more wisdom
+2) click or tap the duck to dispense more wisdom
 
 ## features
 - [the twemoji duck](https://twemoji.twitter.com)
@@ -10,4 +9,6 @@
 - officially questionable on ie5
 - also works on all devices ever through space and time big real guarantee
 - super duper turbo high performance wisdom dispensation and noscript fallback
-- [hyper epic api for devs](https://wisdomduck.azurewebsites.net/api/wisdom/dispense)
+- hyper epic plaintext api for devs (/api/wisdom/dispense)
+- hyper epic json api for devs (/api/wisdom/json)
+- new meganormous performance update (literally millions of requests per second true news)
