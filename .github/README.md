@@ -1,5 +1,7 @@
 # wisdom duck @ https://wisdomduck.sdbagel.com
 
+deno deploy branch for wisdom duck
+
 1) wisdom duck dispenses wisdom
 2) click or tap the duck to dispense more wisdom
 

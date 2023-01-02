@@ -1,13 +1,10 @@
-package main
 
-import "math/rand"
-
-func generateWisdom() string {
+export function generateWisdom(): string {
 	return generateSubject() + " " + generateVerb() + " " + generateNoun()
 }
 
-func generateSubject() string {
-	subject := []string{
+function generateSubject(): string {
+	const subject = [
 		"Duck",
 		"He",
 		"They",
@@ -25,13 +22,13 @@ func generateSubject() string {
 		"Ivy",
 		"Aidan", // Sponsored by AidanJSmith
 		"Goose", // Sponsored by AidanJSmith
-	}
+  ];
 
-	return subject[rand.Intn(len(subject))]
+	return subject[Math.round((Math.random() * subject.length))]
 }
 
-func generateVerb() string {
-	verb := []string{
+function generateVerb(): string {
+	const verb = [
 		"perceives",
 		"understands",
 		"values",
@@ -60,13 +57,13 @@ func generateVerb() string {
 		"develops",
 		"deconstructs",
 		"theorizes",
-	}
+  ];
 
-	return verb[rand.Intn(len(verb))]
+	return verb[Math.round((Math.random() * verb.length))]
 }
 
-func generateNoun() string {
-	noun := []string{
+function generateNoun(): string {
+	const noun = [
 		"friendship",
 		"kindness",
 		"compassion",
@@ -99,7 +96,7 @@ func generateNoun() string {
 		"cats",
 		"catgirl",
 		"catboy", // Sponsored by AidanJSmith
-	}
+  ];
 
-	return noun[rand.Intn(len(noun))]
+	return noun[Math.round((Math.random() * noun.length))]
 }
